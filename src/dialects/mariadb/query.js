@@ -140,7 +140,7 @@ class Query extends AbstractQuery {
     }
     if (this.isRawQuery()) {
       const meta = data.meta;
-      delete data.meta;
+      data.meta = undefined;
       return [data, meta];
     }
     if (this.isShowIndexesQuery()) {
